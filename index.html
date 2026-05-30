@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VistaStore - Tu Tienda de Celulares</title>
+    <link rel="icon" type="image/png" href="<link rel="icon" type="image/jpg" href="C:\Users\Kalel.DESKTOP-33LNKSR\Downloads\Icon Vista.png">
+    <style>
+         
+        :root {
+            --bg-principal: #1e1e24;
+            --bg-tarjetas: #2a2a35;
+            --texto-blanco: #ffffff;
+            --texto-secundario: #a5a5b4;
+            --brave-orange: #ff5a00;
+            --brave-border: #3a3a4a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-principal);
+            color: var(--texto-blanco);
+            padding: 20px;
+        }
+
+        /* Contenedor que simula la ventana limpia del navegador Brave */
+        .brave-browser-frame {
+            border: 2px solid var(--brave-border);
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: var(--bg-principal);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Encabezado y Menú de 5 Opciones */
+        header {
+            background-color: var(--bg-tarjetas);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--brave-border);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--texto-blanco);
+        }
+
+        .logo span {
+            color: var(--brave-orange);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: var(--texto-secundario);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--brave-orange);
+        }
+
+        /* Sección Hero / Bienvenida */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, var(--bg-tarjetas) 0%, var(--bg-principal) 100%);
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: var(--texto-secundario);
+            margin-bottom: 30px;
+        }
+
+        /* Sección de Tienda (Productos) */
+        .tienda-container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tienda-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--brave-orange);
+            padding-left: 15px;
+        }
+
+        .grid-productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* Tarjetas de Celulares con imágenes de marcador */
+        .producto-card {
+            background-color: var(--bg-tarjetas);
+            border: 1px solid var(--brave-border);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .producto-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--brave-orange);
+        }
+
+        .producto-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            background-color: #1e1e24; /* Fondo para resaltar la imagen */
+            padding: 10px;
+        }
+
+        .producto-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .producto-card .precio {
+            color: var(--brave-orange);
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* URL / Botón de la tienda */
+        .btn-tienda {
+            display: inline-block;
+            background-color: var(--brave-orange);
+            color: var(--texto-blanco);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-tienda:hover {
+            background-color: #e04f00;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: var(--bg-tarjetas);
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: var(--texto-secundario);
+            border-top: 1px solid var(--brave-border);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="brave-browser-frame">
+        
+        <header>
+            <div class="logo">Vista<span>Store</span></div>
+            <p align="left"><img src="C:\Users\Kalel.DESKTOP-33LNKSR\Downloads\Icon Vista.jpg" alt=" Vista" width=" 30" height="30" </p>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#tienda">Celulares</a></li>
+                    <li><a href="#accesorios">Accesorios</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero" id="inicio">
+            <h1>Navega por la mejor tecnología móvil</h1>
+            <p>Modelos de alta gama con envíos seguros y la privacidad que buscas.</p>
+        </section>
+
+        <main class="tienda-container" id="tienda">
+            <h2 class="tienda-title">Catálogo Disponible</h2>
+            
+            <div class="grid-productos">
+                
+                <div class="producto-card">
+                    <img src="https://imgs.search.brave.com/YWImYaqBDjxUZBBxDBvFCEyY7Yv00zi1aNvQQijBWgQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YXBwbGUuY29tL214/L2lwaG9uZS0xNy1w/cm8vaW1hZ2VzL2Nh/bWVyYXMvcHJvLXZp/ZGVvL3Byb3Jlc19f/bWc1dWc4cWZ2bXFp/X2xhcmdlLmpwZw">
+                    <h3>Iphone 17 Pro Max (1TB) </h3>
+                    <p class="precio">$40,999.00 MXN</p>
+                    <a href="https://www.mercadolibre.com.mx/apple-iphone-17-pro-max-1-tb-naranja-cosmico-solo-esim-distribuidor-autorizado/p/MLM1054106946?product_trigger_id=MLM1054106943&picker=true&quantity=1https://www.mercadolibre.com.mx/apple-iphone-17-pro-max-1-tb-naranja-cosmico-solo-esim-distribuidor-autorizado/p/MLM1054106946?product_trigger_id=MLM1054106943&picker=true&quantity=1" class="btn-tienda">Ver en Tienda</a>
+                    <p> Envío: Gratis </p>
+                </div>
+
+                <div class="producto-card">
+                    <img src="https://imgs.search.brave.com/bCDmnSAjMd6LDM7LzPBZQl5ADRaKyx56WmkZROhiHjU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aWVu/ZGEubW92aXN0YXIu/Y29tLm14L21lZGlh/L2NhdGFsb2cvcHJv/ZHVjdC9jYWNoZS8w/ODdkODY1NmI5M2Iz/Nzg0NDlhYWQ3ZGUz/N2MzZDA0ZS9zLzIv/czI2X3VsdHJhX25l/Z3JvX2Z2LnBuZw">
+                    <h3>Samsung s26 Ultra (1TB)</h3>
+                    <p class="precio">$45,499.00 MXN</p>
+                    <a href="https://www.mercadolibre.com.mx/samsung-galaxy-s26-ultra-negro-1tb-16gb/up/MLMU3878158528#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=1e0d3959-1090-4060-8e1f-237c8a73acea&wid=MLM2831269035&sid=search" class="btn-tienda">Ver en Tienda</a>
+                    <p> Envío: Gratis </p>
+                </div>
+
+                <div class="producto-card">
+                    <img src="https://imgs.search.brave.com/W77HX64T5JYDsKr3QXvQd9IUCmKUAON88oDIpgD2Tis/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9maWxl/cy50ZWNub2Jsb2cu/bmV0L3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDI1LzEwL3hpYW9t/aS0xNy1wcm8tdmVy/ZGUucG5n">
+                    <h3>Xiaomi 17 pro (1TB) </h3>
+                    <p class="precio">$30,999.00 MXN</p>
+                    <a href="https://www.mercadolibre.com.mx/xiaomi-17-pro-max-161tb-snapdragon-8-elite-5-rom-cn/up/MLMU3555265147#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=4&type=product&tracking_id=56998255-1e25-4bf8-8ca5-7418305bd216&wid=MLM4364010672&sid=search" class="btn-tienda">Ver en Tienda</a>
+                    <p> Envío: Gratis </p>
+                </div>
+
+                <div class="producto-card">
+                    <img src="https://imgs.search.brave.com/Fv7TZSBG4LcbFeeqWa_JWdNWlv3eMDwERwtVetSrvoc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzcxNDAxNS1NTEE5/NDcwNjA1NDg0N18x/MDIwMjUtRS53ZWJw">
+                    <h3>Google Pixel 10 pro XL (256  GB) </h3>
+                    <p class="precio">$30,999.00 MXN</p>
+                    <a href="https://www.mercadolibre.com.mx/celular-google-pixel-10-pro-xl-256gb/p/MLM70094014?pdp_filters=item_id:MLM5392023638#is_advertising=true&searchVariation=MLM70094014&backend_model=search-backend&be_origin=backend&position=2&search_layout=grid&type=pad&tracking_id=7490f77a-9804-4750-841a-118aa178678b&ad_domain=VQCATCORE_LST&ad_position=2&ad_click_id=NzY5NzJlMWItNzIzMy00MGY0LTg2ZTYtMmFlNjk0ODViZDRi" class="btn-tienda">Ver en Tienda</a>
+                    <p> Envío: Gratis </p>
+                </div>
+
+                <div class="producto-card">
+                    <img src="https://imgs.search.brave.com/rTWIrb7JtURVHRDcv41xJvlSYMVQ4XMXly5gYCFqB7Q/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aWVu/ZGEubW92aXN0YXIu/Y29tLm14L21lZGlh/L2NhdGFsb2cvcHJv/ZHVjdC9jYWNoZS8w/ODdkODY1NmI5M2Iz/Nzg0NDlhYWQ3ZGUz/N2MzZDA0ZS9vL3Av/b3Bwby1yZW5vLTE0/LWR1YWwtdmVyZGVf/MS5wbmc">
+                    <h3>Oppo Reno 14 5G (512 GB) (Audifonos de regalo)</h3>
+                    <p class="precio">$14,999.00 MXN </p>
+                    <a href="https://www.mercadolibre.com.mx/celular-oppo-reno14-5g-verde-512gb-12gb-enco-buds3-de-regalo/p/MLM61815932#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=3&type=product&tracking_id=7eec9619-2a1e-499a-953a-ed1e74bd2639&wid=MLM2600571725&sid=search" class="btn-tienda">Ver en Tienda</a>
+                    <p> Envío: Gratis </p>
+                </div>
+
+                <div class="producto-card">
+                    <img src="https://imgs.search.brave.com/cqQLVoLYGEGAp0DWe_57h6jGCubD1HnIxHVmr72y_Cc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/c21hcnQtZ3NtLmNv/bS9pbWcvcGljdHVy/ZS9iaWcveGlhb21p/LXJlZG1pLW5vdGUt/MTQtNWctaW50Lmpw/Zw">
+                    <h3>Redmi Note 14</h3>
+                    <p class="precio">$4,507.50 MXN</p>
+                    <a href="http://mercadolibre.com.mx/xiaomi-redmi-note-14s-4g-667-256gb-8gb-ram-camara-200mpx-black/p/MLM47628650#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=2&type=product&tracking_id=188f6c6f-0906-4da1-b9cd-cdec0757e234&wid=MLM2639975673&sid=search" class="btn-tienda">Ver en Tienda</a>
+                    <p> Envío: Gratis </p>
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Pistetillo Store. Todos los derechos reservados.  </p>
+        <p>&rightrightarrows;; José Terry Kalel Vázquez Zárate & Joshua Gael Hernández Avalos</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
