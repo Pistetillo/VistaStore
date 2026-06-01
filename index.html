@@ -37,7 +37,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        /* Encabezado y Menú de 5 Opciones */
+        /* Encabezado y Menú */
         header {
             background-color: var(--bg-tarjetas);
             padding: 15px 30px;
@@ -61,6 +61,7 @@
             display: flex;
             list-style: none;
             gap: 20px;
+            align-items: center; /* Alinea los textos al centro verticalmente */
         }
 
         nav ul li a {
@@ -111,7 +112,7 @@
             gap: 25px;
         }
 
-        /* Tarjetas de Celulares con imágenes de marcador */
+        /* Tarjetas de Celulares */
         .producto-card {
             background-color: var(--bg-tarjetas);
             border: 1px solid var(--brave-border);
@@ -132,7 +133,7 @@
             object-fit: contain;
             margin-bottom: 15px;
             border-radius: 4px;
-            background-color: #1e1e24; /* Fondo para resaltar la imagen */
+            background-color: #1e1e24;
             padding: 10px;
         }
 
@@ -148,7 +149,7 @@
             margin-bottom: 15px;
         }
 
-        /* URL / Botón de la tienda */
+        /* Botón de la tienda */
         .btn-tienda {
             display: inline-block;
             background-color: var(--brave-orange);
@@ -163,16 +164,18 @@
         .btn-tienda:hover {
             background-color: #e04f00;
         }
-        /* Permite que el menu desplegable se posicione respecto al boton "Laptops */
+
+        /* --- MENÚ DESPLEGABLE CORREGIDO --- */
         .dropdown {
             position: relative;
         }
+
         .dropdown-menu {
-        display: none;
-        position: absolute;
-        top: 100%; 
-        left:0;
-            background-color:var(--bg-tarjetas); 
+            display: none;
+            position: absolute;
+            top: 100%; 
+            left: 0;
+            background-color: var(--bg-tarjetas); 
             border: 1px solid var(--brave-border);
             border-radius: 6px;
             min-width: 200px;
@@ -181,23 +184,31 @@
             list-style: none;
             padding: 10px 0;
         }
+
+        .dropdown-menu li {
+            width: 100%;
+        }
+
         .dropdown-menu li a {
             color: var(--texto-secundario);
-            padding; 10px 20px;
+            padding: 10px 20px; /* Corregido el punto y coma anterior */
             display: block;
             text-decoration: none;
-            font-size 14px;
+            font-size: 14px; /* Corregido los dos puntos anteriores */
             transition: background 0.2s, color 0.2s;
+            text-align: left;
         }
+
         .dropdown-menu li a:hover {
-            background-color: var (--brave-border);
+            background-color: var(--brave-border); /* Corregido el espacio en var() */
             color: var(--brave-orange);
         }
-        .dropdown: hover .dropdown-menu{
-            display.block;}
-        
-            
 
+        /* Corregido el espacio después de los dos puntos en el hover */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
         /* Pie de página */
         footer {
             background-color: var(--bg-tarjetas);
@@ -206,6 +217,10 @@
             font-size: 14px;
             color: var(--texto-secundario);
             border-top: 1px solid var(--brave-border);
+        }
+        
+        footer p {
+            margin-bottom: 5px;
         }
     </style>
 </head>
@@ -220,22 +235,22 @@
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#tienda">Celulares</a></li>
                     <li><a href="#accesorios">Accesorios</a></li>
+                    
                     <li class="dropdown">
-                    <a href="#Laptops" class="dropown-toggle">Laptops </a>
+                        <a href="#Laptops" class="dropdown-toggle">Laptops ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://www.hp.com/mx-es/home.html" target="_blank">HP</a></li>
+                            <li><a href="https://www.acer.com/mx-es" target="_blank">Acer</a></li>
+                            <li><a href="https://www.lenovo.com/mx/es/" target="_blank">Lenovo</a></li>
+                            <li><a href="https://www.asus.com/mx/" target="_blank">Asus</a></li>
+                            <li><a href="https://mx.msi.com/" target="_blank">Msi</a></li>
+                            <li><a href="Hp.html">HP Local</a></li>
+                        </ul>
+                    </li>
                     
                     <li><a href="#ofertas">Ofertas</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=BtLSaxRnIhc">Contacto</a></li>
-                    <ul class="dropdown-menu">
-                        <li><a href="https://www.hp.com/mx-es/home.html">HP</a></li>
-                        <li><a href="https://www.acer.com/mx-es">Acer</a></li>
-                        <li><a href="https://www.lenovo.com/mx/es/">Lenovo</a></li>
-                        <li><a href="https://www.asus.com/mx/">Asus</a></li>
-                        <li><a href="https://mx.msi.com/">Msi</a></li>
-                        <li><a href="Hp.html">HP</a></li>
-                    
-                        
-                        
-                      </ul>
+                    <li><a href="https://www.youtube.com/watch?v=BtLSaxRnIhc" target="_blank">Contacto</a></li>
+                </ul>
             </nav>
         </header>
 
@@ -250,91 +265,92 @@
             <div class="grid-productos">
                 
                 <div class="producto-card">
-                    <img src="https://imgs.search.brave.com/YWImYaqBDjxUZBBxDBvFCEyY7Yv00zi1aNvQQijBWgQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YXBwbGUuY29tL214/L2lwaG9uZS0xNy1w/cm8vaW1hZ2VzL2Nh/bWVyYXMvcHJvLXZp/ZGVvL3Byb3Jlc19f/bWc1dWc4cWZ2bXFp/X2xhcmdlLmpwZw">
+                    <img src="https://imgs.search.brave.com/YWImYaqBDjxUZBBxDBvFCEyY7Yv00zi1aNvQQijBWgQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YXBwbGUuY29tL214/L2lwaG9uZS0xNy1w/cm8vaW1hZ2VzL2Nh/bWVyYXMvcHJvLXZp/ZGVvL3Byb3Jlc19f/bWc1dWc4cWZ2bXFp/X2xhcmdlLmpwZw" alt="iPhone 17 Pro Max">
                     <h3>Iphone 17 Pro Max (1TB) </h3>
                     <p class="precio">$40,999.00 MXN</p>
-                    <a href="https://www.mercadolibre.com.mx/apple-iphone-17-pro-max-1-tb-naranja-cosmico-solo-esim-distribuidor-autorizado/p/MLM1054106946?product_trigger_id=MLM1054106943&picker=true&quantity=1https://www.mercadolibre.com.mx/apple-iphone-17-pro-max-1-tb-naranja-cosmico-solo-esim-distribuidor-autorizado/p/MLM1054106946?product_trigger_id=MLM1054106943&picker=true&quantity=1" class="btn-tienda">Ver en Tienda</a>
-                    <p> Envío: Gratis </p>
+                    <a href="https://www.mercadolibre.com.mx/apple-iphone-17-pro-max-1-tb-naranja-cosmico-solo-esim-distribuidor-autorizado/p/MLM1054106946?product_trigger_id=MLM1054106943&picker=true&quantity=1" class="btn-tienda">Ver en Tienda</a>
+                    <p style="margin-top: 10px; color: var(--texto-secundario);"> Envío: Gratis </p>
                 </div>
 
                 <div class="producto-card">
-                    <img src="https://imgs.search.brave.com/bCDmnSAjMd6LDM7LzPBZQl5ADRaKyx56WmkZROhiHjU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aWVu/ZGEubW92aXN0YXIu/Y29tLm14L21lZGlh/L2NhdGFsb2cvcHJv/ZHVjdC9jYWNoZS8w/ODdkODY1NmI5M2Iz/Nzg0NDlhYWQ3ZGUz/N2MzZDA0ZS9zLzIv/czI2X3VsdHJhX25l/Z3JvX2Z2LnBuZw">
+                    <img src="https://imgs.search.brave.com/bCDmnSAjMd6LDM7LzPBZQl5ADRaKyx56WmkZROhiHjU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aWVu/ZGEubW92aXN0YXIu/Y29tLm14L21lZGlh/L2NhdGFsb2cvcHJv/ZHVjdC9jYWNoZS8w/ODdkODY1NmI5M2Iz/Nzg0NDlhYWQ3ZGUz/N2MzZDA0ZS9zLzIv/czI2X3VsdHJhX25l/Z3JvX2Z2LnBuZw" alt="Samsung S26 Ultra">
                     <h3>Samsung s26 Ultra (1TB)</h3>
                     <p class="precio">$45,499.00 MXN</p>
                     <a href="https://www.mercadolibre.com.mx/samsung-galaxy-s26-ultra-negro-1tb-16gb/up/MLMU3878158528#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=1e0d3959-1090-4060-8e1f-237c8a73acea&wid=MLM2831269035&sid=search" class="btn-tienda">Ver en Tienda</a>
-                    <p> Envío: Gratis </p>
+                    <p style="margin-top: 10px; color: var(--texto-secundario);"> Envío: Gratis </p>
                 </div>
 
                 <div class="producto-card">
-                    <img src="https://imgs.search.brave.com/W77HX64T5JYDsKr3QXvQd9IUCmKUAON88oDIpgD2Tis/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9maWxl/cy50ZWNub2Jsb2cu/bmV0L3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDI1LzEwL3hpYW9t/aS0xNy1wcm8tdmVy/ZGUucG5n">
+                    <img src="https://imgs.search.brave.com/W77HX64T5JYDsKr3QXvQd9IUCmKUAON88oDIpgD2Tis/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9maWxl/cy50ZWNub2Jsb2cu/bmV0L3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDI1LzEwL3hpYW9t/aS0xNy1wcm8tdmVy/ZGUucG5n" alt="Xiaomi 17 Pro">
                     <h3>Xiaomi 17 pro (1TB) </h3>
                     <p class="precio">$30,999.00 MXN</p>
                     <a href="https://www.mercadolibre.com.mx/xiaomi-17-pro-max-161tb-snapdragon-8-elite-5-rom-cn/up/MLMU3555265147#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=4&type=product&tracking_id=56998255-1e25-4bf8-8ca5-7418305bd216&wid=MLM4364010672&sid=search" class="btn-tienda">Ver en Tienda</a>
-                    <p> Envío: Gratis </p>
+                    <p style="margin-top: 10px; color: var(--texto-secundario);"> Envío: Gratis </p>
                 </div>
 
                 <div class="producto-card">
-                    <img src="https://imgs.search.brave.com/Fv7TZSBG4LcbFeeqWa_JWdNWlv3eMDwERwtVetSrvoc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzcxNDAxNS1NTEE5/NDcwNjA1NDg0N18x/MDIwMjUtRS53ZWJw">
-                    <h3>Google Pixel 10 pro XL (256  GB) </h3>
+                    <img src="https://imgs.search.brave.com/Fv7TZSBG4LcbFeeqWa_JWdNWlv3eMDwERwtVetSrvoc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzcxNDAxNS1NTEE5/NDcwNjA1NDg0N18x/MDIwMjUtRS53ZWJw" alt="Google Pixel 10 Pro XL">
+                    <h3>Google Pixel 10 pro XL (256 GB) </h3>
                     <p class="precio">$30,999.00 MXN</p>
                     <a href="https://www.mercadolibre.com.mx/celular-google-pixel-10-pro-xl-256gb/p/MLM70094014?pdp_filters=item_id:MLM5392023638#is_advertising=true&searchVariation=MLM70094014&backend_model=search-backend&be_origin=backend&position=2&search_layout=grid&type=pad&tracking_id=7490f77a-9804-4750-841a-118aa178678b&ad_domain=VQCATCORE_LST&ad_position=2&ad_click_id=NzY5NzJlMWItNzIzMy00MGY0LTg2ZTYtMmFlNjk0ODViZDRi" class="btn-tienda">Ver en Tienda</a>
-                    <p> Envío: Gratis </p>
+                    <p style="margin-top: 10px; color: var(--texto-secundario);"> Envío: Gratis </p>
                 </div>
 
                 <div class="producto-card">
-                    <img src="https://imgs.search.brave.com/rTWIrb7JtURVHRDcv41xJvlSYMVQ4XMXly5gYCFqB7Q/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aWVu/ZGEubW92aXN0YXIu/Y29tLm14L21lZGlh/L2NhdGFsb2cvcHJv/ZHVjdC9jYWNoZS8w/ODdkODY1NmI5M2Iz/Nzg0NDlhYWQ3ZGUz/N2MzZDA0ZS9vL3Av/b3Bwby1yZW5vLTE0/LWR1YWwtdmVyZGVf/MS5wbmc">
-                    <h3>Oppo Reno 14 5G (512 GB) (Audifonos de regalo)</h3>
+                    <img src="https://imgs.search.brave.com/rTWIrb7JtURVHRDcv41xJvlSYMVQ4XMXly5gYCFqB7Q/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aWVu/ZGEubW92aXN0YXIu/Y29tLm14L21lZGlh/L2NhdGFsb2cvcHJv/ZHVjdC9jYWNoZS8w/ODdkODY1NmI5M2Iz/Nzg0NDlhYWQ3ZGUz/N2MzZDA0ZS9vL3Av/b3Bwby1yZW5vLTE0/LWR1YWwtdmVyZGVf/MS5wbmc" alt="Oppo Reno 14">
+                    <h3>Oppo Reno 14 5G (512 GB)</h3>
                     <p class="precio">$14,999.00 MXN </p>
                     <a href="https://www.mercadolibre.com.mx/celular-oppo-reno14-5g-verde-512gb-12gb-enco-buds3-de-regalo/p/MLM61815932#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=3&type=product&tracking_id=7eec9619-2a1e-499a-953a-ed1e74bd2639&wid=MLM2600571725&sid=search" class="btn-tienda">Ver en Tienda</a>
-                    <p> Envío: Gratis </p>
+                    <p style="margin-top: 10px; color: var(--texto-secundario);"> Envío: Gratis </p>
                 </div>
 
                 <div class="producto-card">
-                    <img src="https://imgs.search.brave.com/cqQLVoLYGEGAp0DWe_57h6jGCubD1HnIxHVmr72y_Cc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/c21hcnQtZ3NtLmNv/bS9pbWcvcGljdHVy/ZS9iaWcveGlhb21p/LXJlZG1pLW5vdGUt/MTQtNWctaW50Lmpw/Zw">
+                    <img src="https://imgs.search.brave.com/cqQLVoLYGEGAp0DWe_57h6jGCubD1HnIxHVmr72y_Cc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/c21hcnQtZ3NtLmNv/bS9pbWcvcGljdHVy/ZS9iaWcveGlhb21p/LXJlZG1pLW5vdGUt/MTQtNWctaW50Lmpw/Zw" alt="Redmi Note 14">
                     <h3>Redmi Note 14 (256 GB)</h3>
                     <p class="precio">$4,507.50 MXN</p>
                     <a href="http://mercadolibre.com.mx/xiaomi-redmi-note-14s-4g-667-256gb-8gb-ram-camara-200mpx-black/p/MLM47628650#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=2&type=product&tracking_id=188f6c6f-0906-4da1-b9cd-cdec0757e234&wid=MLM2639975673&sid=search" class="btn-tienda">Ver en Tienda</a>
-                    <p> Envío: Gratis </p>
+                    <p style="margin-top: 10px; color: var(--texto-secundario);"> Envío: Gratis </p>
                 </div>
+
                 <div class="producto-card">
-                    <img src="https://imgs.search.brave.com/UKuevA6wtLGCdqljFsp21ngyAku8UUBNpa3JnksMMtc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzcwMzI1Ni1NTEE5/OTA5NTUwNjk3OV8x/MTIwMjUtRS53ZWJw">
+                    <img src="https://imgs.search.brave.com/UKuevA6wtLGCdqljFsp21ngyAku8UUBNpa3JnksMMtc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzcwMzI1Ni1NTEE5/OTA5NTUwNjk3OV8x/MTIwMjUtRS53ZWJw" alt="Red Magic 11 Pro">
                     <h3>Red Magic 11 Pro (1TB)</h3>
                     <p class="precio">$33,175.25 MXN</p>
                     <a href="https://www.mercadolibre.com.mx/redmagic-11-pro-24gb-1tb-telefono-5g-snapdragon-8-elite-gen-5-smartphone-685-amoled-144hz-refrigeracion-liquida-7500mah-80w-carga-inalambrica-nfc-color-subzero/p/MLM63084694#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=7&type=product&tracking_id=82a0c92c-a4da-4b42-bb4e-42ad8c98aac3&wid=MLM4503452212&sid=search" class="btn-tienda">Ver en Tienda</a>
-                    <p> Envío: Gratis </p>
+                    <p style="margin-top: 10px; color: var(--texto-secundario);"> Envío: Gratis </p>
                 </div>
 
                 <div class="producto-card">
-                    <img src="https://imgs.search.brave.com/SfqENpdCnNdbbPysWTPTR2r0oDP5ey8JMVFvsuU7FpA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jb21w/cmFzbWFydHBob25l/LmNvbS9fbmV4dC9p/bWFnZT91cmw9aHR0/cHM6Ly9zdG9yYWdl/LmNvbXByYXNtYXJ0/cGhvbmUuY29tL3Nt/YXJ0cGhvbmVzL2hv/bm9yLTYwMC1wcm8u/cG5nJnc9NjQwJnE9/NzU">
+                    <img src="https://imgs.search.brave.com/SfqENpdCnNdbbPysWTPTR2r0oDP5ey8JMVFvsuU7FpA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jb21w/cmFzbWFydHBob25l/LmNvbS9fbmV4dC9p/bWFnZT91cmw9aHR0/cHM6Ly9zdG9yYWdl/LmNvbXByYXNtYXJ0/cGhvbmUuY29tL3Nt/YXJ0cGhvbmVzL2hv/bm9yLTYwMC1wcm8u/cG5nJnc9NjQwJnE9/NzU" alt="Honor 600 Pro">
                     <h3>Honor 600 Pro (512 GB)</h3>
                     <p class="precio">$22,589.61 MXN</p>
                     <a href="https://articulo.mercadolibre.com.mx/MLM-2932941901-honor-honor-n-series-honor-600-pro-5g-dual-sim-512gb-12gb-ram-celular-200mp-7000-mah-657-120hz-magicos-10-android-16-smartphone-blanco-dorado-_JM#is_advertising=true&backend_model=search-backend&be_origin=backend&position=8&search_layout=grid&type=pad&tracking_id=6a5e004f-5a66-4b2c-8838-dd5d7a67296c&ad_domain=VQCATCORE_LST&ad_position=8&ad_click_id=ZGFhMDI1ZjktMjFkYy00NjRlLTg5NzctYTA5ZjBjNmI3NDc1" class="btn-tienda">Ver en Tienda</a>
-                    <p> Envío: Gratis </p>
+                    <p style="margin-top: 10px; color: var(--texto-secundario);"> Envío: Gratis </p>
                 </div>
 
                 <div class="producto-card">
-                    <img src="https://imgs.search.brave.com/RGvrQwJ3nRCxVm8Fv524KRsA1yZiwL0ztNrw-4tV6ZQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9uZXh0/bW9iaWxlLmFlL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI2LzA1/L2h1YXdlaV9ub3Zh/XzE1X21heF91YWUt/YmxhY2stMS01OTV4/NTk1LnBuZw">
+                    <img src="https://imgs.search.brave.com/RGvrQwJ3nRCxVm8Fv524KRsA1yZiwL0ztNrw-4tV6ZQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9uZXh0/bW9iaWxlLmFlL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI2LzA1/L2h1YXdlaV9ub3Zh/XzE1X21heF91YWUt/YmxhY2stMS01OTV4/NTk1LnBuZw" alt="Huawei Nova 15 Max">
                     <h3>Huawei nova 15 Max (256 GB)</h3>
                     <p class="precio">$9,999.00 MXN</p>
                     <a href="https://www.mercadolibre.com.mx/celular-huawei-nova-15-max-8256g-pantalla-vivid-oled/up/MLMU3971515441#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=5&type=product&tracking_id=c585530b-9005-4ace-91be-b1ec333868bb&wid=MLM5362421906&sid=search" class="btn-tienda">Ver en Tienda</a>
-                    <p> Envío: Gratis </p>
+                    <p style="margin-top: 10px; color: var(--texto-secundario);"> Envío: Gratis </p>
                 </div>
-                 <div class="producto-card">
-                    <img src="https://imgs.search.brave.com/Nr3nWeK2-9v5USPvkLRg3OOIKIqRtxDcsPQgdp838-U/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9OUV9OUF82/NzA4ODQtTUxBMTAy/ODgzMDU2NTk1XzEy/MjAyNS1PLndlYnA">
+
+                <div class="producto-card">
+                    <img src="https://imgs.search.brave.com/Nr3nWeK2-9v5USPvkLRg3OOIKIqRtxDcsPQgdp838-U/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9OUV9OUF82/NzA4ODQtTUxBMTAy/ODgzMDU2NTk1XzEy/MjAyNS1PLndlYnA" alt="Poco F8 Ultra">
                     <h3>Poco F8 Ultra (512 GB)</h3>
                     <p class="precio">$22,820.00 MXN</p>
-                    <a href="https://www.mercadolibre.com.mx/celular-xiaomi-poco-f8-ultra-dual-sim-5g-512-gb-16-gb-ram-negro-con-audio-bose/p/MLM63615506"class="btn-tienda">Ver en Tienda</a>
-                    <p> Envío: Gratis </p>
+                    <a href="https://www.mercadolibre.com.mx/celular-xiaomi-poco-f8-ultra-dual-sim-5g-512-gb-16-gb-ram-negro-con-audio-bose/p/MLM63615506" class="btn-tienda">Ver en Tienda</a>
+                    <p style="margin-top: 10px; color: var(--texto-secundario);"> Envío: Gratis </p>
                 </div>
 
             </div>
         </main>
 
         <footer>
-            <p>&copy; 2026 VistaStore &trade;. Todos los derechos reservados &reg;.  </p>
-        <p>&rightrightarrows;; Creator: Pistetillo </p>
-        <p>&rArr;Contacto: pistetillo@gmail.con </p>
-        </footer>
+            <p>&copy; 2026 VistaStore &trade;. Todos los derechos reservados &reg;.</p>
+            <p>&rightrightarrows; Creator: Pistetillo </p>
+            <p>&rArr; Contacto: pistetillo@gmail.com </p> </footer>
 
     </div>
 
