@@ -163,6 +163,40 @@
         .btn-tienda:hover {
             background-color: #e04f00;
         }
+        /* Permite que el menu desplegable se posicione respecto al boton "Laptops */
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%; 
+        left:0;
+            background-color:var(--bg-tarjetas); 
+            border: 1px solid var(--brave-border);
+            border-radius: 6px;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+            z-index: 1000;
+            list-style: none;
+            padding: 10px 0;
+        }
+        .dropdown-menu li a {
+            color: var(--texto-secundario);
+            padding; 10px 20px;
+            display: block;
+            text-decoration: none;
+            font-size 14px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .dropdown-menu li a:hover {
+            background-color: var (--brave-border);
+            color: var(--brave-orange);
+        }
+        .dropdown: hover .dropdown-menu{
+            display.block;}
+        
+            
 
         /* Pie de página */
         footer {
@@ -186,6 +220,19 @@
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#tienda">Celulares</a></li>
                     <li><a href="#accesorios">Accesorios</a></li>
+                    <li class="dropdown">
+                    <a href="#Laptops" class="dropown-toggle">Laptops </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://www.hp.com/mx-es/home.html">HP</a></li>
+                        <li><a href="https://www.acer.com/mx-es">Acer</a></li>
+                        <li><a href="https://www.lenovo.com/mx/es/">Lenovo</a></li>
+                        <li><a href="https://www.asus.com/mx/">Asus</a></li>
+                        <li><a href="https://mx.msi.com/">Msi</a></li>
+                        <li><a href="Hp.html">HP</a></li>
+                        
+                        
+                        
+                    
                     <li><a href="#ofertas">Ofertas</a></li>
                     <li><a href="https://www.youtube.com/watch?v=BtLSaxRnIhc">Contacto</a></li>
                 </ul>
@@ -277,7 +324,7 @@
                     <h3>Poco F8 Ultra (512 GB)</h3>
                     <p class="precio">$22,820.00 MXN</p>
                     <a href="https://www.mercadolibre.com.mx/celular-xiaomi-poco-f8-ultra-dual-sim-5g-512-gb-16-gb-ram-negro-con-audio-bose/p/MLM63615506"class="btn-tienda">Ver en Tienda</a>
-                    <p> Envío: 2,000.00 MXN </p>
+                    <p> Envío: Gratis </p>
                 </div>
 
             </div>
