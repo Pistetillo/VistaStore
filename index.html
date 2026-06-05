@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -182,10 +182,10 @@
         }
 
         .tienda-title {
-            font-size: 28px;
-            margin-bottom: 30px;
+            font-size: 33px;
+            margin-bottom: 35px;
             border-left: 5px solid var(--brave-orange);
-            padding-left: 15px;
+            padding-left: 18px;
         }
 
         .grid-productos {
@@ -248,6 +248,17 @@
 
         .btn-tienda:hover {
             background-color: #e04f00;
+        }
+        .txt-tienda {
+           display: inline-block;
+            background-color: var(--brave-orange);
+            color: var(--texto-blanco);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin-bottom: 10px; 
         }
 
         /* Características / Beneficios */
@@ -353,6 +364,7 @@
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#tienda">Celulares</a></li>
                     <li><a href="#accesorios">Accesorios</a></li>
+                     <li><a href="#consolas">Consolas</a></li>
                     <li><a href="https://www.youtube.com/watch?v=BtLSaxRnIhc">Más acerca de nosotros</a></li>
                     <li class="dropdown">
                         <a href="#Laptops" class="dropdown-toggle">Laptops ▼</a>
@@ -371,25 +383,7 @@
                             <li><a href="https://www.gigabyte.com/mx/Laptop" target="_blank">Gigabyte</a></li>
                         </ul>
 
-                        <li class="dropdown">
-                        <a href="Consolas" class="dropdown-toggle">Consolas ▼</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="https://www.hp.com/mx-es/home.html" target="_blank">Xbox Series X</a></li>
-                            <li><a href="https://www.acer.com/mx-es" target="_blank">Xbox Series S</a></li>
-                            <li><a href="https://www.hp.com/mx-es/home.html" target="_blank">Xbox One X</a></li>
-                            <li><a href="https://www.acer.com/mx-es" target="_blank">Xbox One S</a></li>
-                            <li><a href="https://www.acer.com/mx-es" target="_blank">Xbox One Fat</a></li>
-                            <li><a href="https://www.lenovo.com/mx/es/" target="_blank">Nintendo Switch 2</a></li>
-                            <li><a href="https://www.asus.com/mx/" target="_blank">Nintendo Switch</a></li>
-                            <li><a href="https://mx.msi.com/" target="_blank">Wii U</a></li>
-                            <li><a href="https://www.dell.com/mx/p/" target="_blank"></a></li>
-                            <li><a href="https://www.apple.com/mx/mac/" target="_blank">Playstation 5 Pro</a></li>
-                            <li><a href="https://consumer.huawei.com/mx/laptops/" target="_blank">Playstation 5 Slim</a></li>
-                            <li><a href="https://www.samsung.com/mx/computers/all-computers/" target="_blank">Playstation 5 Fat</a></li>
-                            <li><a href="https://www.razer.com/pc/gaming-laptops" target="_blank">Playstation 4 Pro</a></li>
-                            <li><a href="https://www.microsoft.com/es-mx/surface" target="_blank">Playstation 4 Slim</a></li>
-                            <li><a href="https://www.gigabyte.com/mx/Laptop" target="_blank">Playstation 4 Fat</a></li>
-                        </ul>
+                        
                     </li>
                     
                     <li><a href="#ofertas">Ofertas</a></li>
@@ -545,7 +539,7 @@
             </div>
         </main>
 
-        <section class="tienda-container" id="accesorios">
+        <section class="tienda-co>ntainer" id="accesorios"
             <h2 class="tienda-title">Accesorios Esenciales</h2>
             <div class="grid-productos">
                 
@@ -563,6 +557,38 @@
                     <p class="precio">$2996.00 MXN</p>
                     <a href="https://www.mercadolibre.com.mx/bocina-bose-bluetooth-soundlink-flex-se-2-12h-bateria/up/MLMU3881353718#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=13&type=product&tracking_id=e34e954c-593c-480b-96bb-1bc1215397b3&wid=MLM5109179708&sid=search" class="btn-tienda">Comprar Ahora</a>
                     <p style="color: var(--texto-secundario); font-size: 14px;">Duracion de 12h garantizada</p>
+                </div>
+
+                <div class="producto-card">
+                    <img src="https://images.unsplash.com/photo-1603302576837-37561b2fe536?auto=format&fit=crop&w=400&q=80" alt="Funda de Carbono">
+                    <h3>Carcasa de Fibra de Carbono</h3>
+                    <p class="precio">$550.00 MXN</p>
+                    <a href="#" class="btn-tienda">Comprar Ahora</a>
+                    <p style="color: var(--texto-secundario); font-size: 14px;">Alta protección anticaídas</p>
+                </div>
+            </div>
+        </section>
+
+ <section class="tienda-co>ntainer" id="consolas"
+            <h2 class="tienda-title">Consolas en catalogo</h2>
+            <div class="grid-productos">
+                
+                <div class="producto-card">
+                    <img src="https://imgs.search.brave.com/7QZXixKVC8McadNmNAT2vy--PBGeG7QDaxhhS1vEITU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L0FT/QzhjOEFEODRBUXRh/TDk0WGZTM2ouanBn" alt="Xbox Series X">
+                    <h3>Xbox Series X</h3>
+                    <p class="precio">$10,299.00 MXN</p>
+                    <a href="https://www.mercadolibre.com.mx/consola-xbox-serie-x-color-negro-excelente-reacondicionado/p/MLM2013747229#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=15&type=product&tracking_id=d197dca0-ce3b-4705-b4d1-db603032c0e5&wid=MLM2984762117&sid=search" class="btn-tienda">Comprar Ahora</a>
+                    <p style="color: var(--texto-secundario); font-size: 12px;">Envio: Gratis</p>
+                    <p style="color: var(--texto-secundario); font-size: 14px;">Consola reacondicionada</p>
+                </div>
+
+                <div class="producto-card">
+                    <img src="https://imgs.search.brave.com/DN2HnIbb0blnIzf8Od2XCph7qjuAlUC0XZEgcD2mHGo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jbXMt/YXNzZXRzLnhib3hz/ZXJ2aWNlcy5jb20v/YXNzZXRzLzFjLzA2/LzFjMDY4YzVmLTEw/MzYtNDViNC05M2Nj/LTUyN2EyNDgyNTVj/OC5wbmc_bj0zODk5/NjRfSGVyby1HYWxs/ZXJ5LTBfQzJfODU3/eDY3Ni5wbmc" alt="Xbox series S">
+                    <h3>Xbox Series S</h3>
+                    <p class="precio">$5,299.00 MXN</p>
+                    <a href="https://www.mercadolibre.com.mx/consola-xbox-microsoft-series-s-de-512gb-digital-color-blanco-excelente-reacondicionado/p/MLM2014099446#polycard_client=search-desktop&be_origin=backend&search_layout=grid&position=1&type=product&tracking_id=5d5ec4ba-1fb6-4e1f-93b2-1d3572b4936c&wid=MLM2346044697&sid=search" class="btn-tienda">Comprar Ahora</a>
+                    <p style="color: var(--texto-secundario); font-size: 12px;">Envio: Gratuito</p>
+                    <p style="color: var(--texto-secundario); font-size: 14px;">Consola Reacondicionada</p>
                 </div>
 
                 <div class="producto-card">
